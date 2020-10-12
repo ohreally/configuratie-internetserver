@@ -1,0 +1,36 @@
+################################################################################
+#
+# Ssh configuratie.
+#
+# ~/.ssh/config
+#
+# Meer info: https://www.librobert.net/boek/internet
+#
+################################################################################
+#
+# Copyright (c) 2019 Robert LA LAU < https://www.librobert.net/ >
+#
+# Dit werk is gelicenseerd onder een Creative Commons Naamsvermelding 4.0 Internationaal licentie.
+# Bezoek http://creativecommons.org/licenses/by/4.0/ om een kopie te zien van de licentie
+# of stuur een brief naar Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+#
+################################################################################
+
+AddKeysToAgent yes
+CheckHostIP yes
+StrictHostKeyChecking ask
+TCPKeepAlive yes
+UpdateHostKeys ask
+VisualHostKey yes
+
+Host grn
+ HostName groen.example.com
+ User dimitri
+ IdentityFile /home/dimitri/.ssh/id_rsa-groen
+ SetEnv OmgVar=iets
+
+Host blw
+ HostName blauw.example.com
+ Port 2022
+ User dim
+ IdentityFile /home/dimitri/.ssh/id_rsa-blauw

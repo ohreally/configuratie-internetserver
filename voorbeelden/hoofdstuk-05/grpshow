@@ -1,0 +1,120 @@
+#!/usr/bin/env bash
+
+################################################################################
+#
+# Dit script toont de leden van een gegeven groep.
+# Meer info: https://www.librobert.net/boek/internet
+#
+# Sla dit script op als /usr/local/bin/grpshow en maak het uitvoerbaar:
+#
+#    # chown root:root /usr/local/bin/grpshow
+#    # chmod 755 grpshow
+#
+# Roep het aan met één of meer groepnamen of groep-ids als argumenten:
+#
+#    $ grpshow wheel
+#    $ grpshow 10 marketing
+#
+################################################################################
+#
+# Copyright (c) 2019 Robert LA LAU < https://www.librobert.net/ >
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+#
+# 1. Redistributions of source code must retain the above copyright notice,
+#    this list of conditions and the following disclaimer.
+#
+# 2. Redistributions in binary form must reproduce the above copyright notice,
+#    this list of conditions and the following disclaimer in the documentation
+#    and/or other materials provided with the distribution.
+#
+# 3. Neither the name of the copyright holder nor the names of its contributors
+#    may be used to endorse or promote products derived from this software
+#    without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+# SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+################################################################################
+
+# De bestanden waarin gezocht moet worden.
+# Normaal gesproken hoeft dit niet gewijzigd te worden.
+GFILE=/etc/group
+PFILE=/etc/passwd
+
+################################################################################
+
+# We hebben grep nodig.
+GREP=`which grep` || exit 1
+
+# Zonder groepen kunnen we niet verder.
+[ -z "$*" ] && {
+	echo "Usage: $0 <group> [group [...]]"
+	exit 1
+}
+
+# Regular expression voor het vinden van numerieke waarden.
+regexp='^[0-9]+$'
+
+# Door de argumenten loopen.
+for group in $@; do
+	# Groep vinden in het groepenbestand.
+	if [[ ${group} =~ ${regexp} ]]; then
+		# De groep is numeriek, dus we gaan op zoek naar het id (3e veld).
+		gline=`"${GREP}" "^[^:]*:[^:]*:${group}:" "${GFILE}"`
+	else
+		# Niet numeriek, dus op zoek naar de naam (1e veld).
+		gline=`"${GREP}" "^${group}:" "${GFILE}"`
+	fi
+
+	[ -z "${gline}" ] && {
+		# Groep niet gevonden.
+		echo " Group : ${group}"
+		echo " No such group"
+		echo
+		continue
+	}
+
+	# De regel in een array zetten
+	# (na de dubbele punten vervangen te hebben door spaties).
+	gline=(${gline//:/ })
+
+	# Groepsnaam (1e veld).
+	gname=${gline[0]}
+
+	# Groeps-id (3e veld).
+	gid=${gline[2]}
+
+	# Leden (4e veld).
+	supl=${gline[3]}
+
+	# In gebruikersbestand zoeken naar gebruikers
+	# die deze groep als primaire groep hebben.
+	declare -A prim
+	while read pline; do
+		# De gebruikersnaam is het eerste veld.
+		prim[${#prim[*]}]=${pline%%:*}
+	done < <("${GREP}" "^[^:]*:[^:]*:[^:]*:${gid}:" "${PFILE}")
+
+	# Gebruikers samenvoegen, gescheiden door komma's.
+	prim="${prim[@]}"
+	prim=${prim// /,}
+
+	# Output.
+	echo "                    Groep : ${gname} (${gid})"
+	echo "      Primaire groep voor : ${prim:--}"
+	echo "Supplementaire groep voor : ${supl:--}"
+	echo
+
+	# Variabele wissen voor de volgende lus.
+	unset prim
+done

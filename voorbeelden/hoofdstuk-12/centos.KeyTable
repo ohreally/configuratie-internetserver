@@ -1,0 +1,21 @@
+################################################################################
+#
+# CentOS OpenDKIM KeyTable.
+#
+# /etc/opendkim/KeyTable
+#
+# Meer info: https://www.librobert.net/boek/internet
+#
+################################################################################
+#
+# Copyright (c) 2019 Robert LA LAU < https://www.librobert.net/ >
+#
+# Dit werk is gelicenseerd onder een Creative Commons Naamsvermelding 4.0 Internationaal licentie.
+# Bezoek http://creativecommons.org/licenses/by/4.0/ om een kopie te zien van de licentie
+# of stuur een brief naar Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+#
+################################################################################
+
+dkim._domainkey.example.com example.com:dkim:/etc/opendkim/keys/example.com/dkim.private
+dkim._domainkey.example.edu example.edu:dkim:/etc/opendkim/keys/example.edu/dkim.private
+dkim._domainkey.example.org example.org:dkim:/etc/opendkim/keys/example.org/dkim.private

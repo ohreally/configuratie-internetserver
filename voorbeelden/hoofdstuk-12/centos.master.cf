@@ -1,0 +1,39 @@
+################################################################################
+#
+# CentOS Postfix daemon processen.
+#
+# /etc/postfix/master.cf
+#
+# Meer info: https://www.librobert.net/boek/internet
+#
+################################################################################
+#
+# Copyright (c) 2019 Robert LA LAU < https://www.librobert.net/ >
+#
+# Dit werk is gelicenseerd onder een Creative Commons Naamsvermelding 4.0 Internationaal licentie.
+# Bezoek http://creativecommons.org/licenses/by/4.0/ om een kopie te zien van de licentie
+# of stuur een brief naar Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+#
+################################################################################
+
+smtp		inet	n	-	n	-	-	smtpd
+
+submission	inet	n	-	n	-	-	smtpd
+  -o syslog_name=postfix/submission
+  -o smtpd_tls_security_level=encrypt
+  -o smtpd_tls_auth_only=yes
+  -o smtpd_reject_unlisted_recipient=no
+  -o smtpd_client_restrictions=permit_sasl_authenticated,reject
+  -o milter_macro_daemon_name=ORIGINATING
+
+dovecot		unix	-	n	n	-	-	pipe
+  flags=DRhu user=vmail:vmail argv=/usr/libexec/dovecot/dovecot-lda -f ${sender} -a ${original_recipient} -d ${user}
+
+policyd-spf unix	-	n	n	-	0	spawn
+  user=policyd-spf argv=/usr/libexec/postfix/policyd-spf
+
+
+# [...]
+#
+# Geen regels uit het bestand verwijderen
+# die niet botsen met de regels hierboven.

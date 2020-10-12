@@ -1,0 +1,23 @@
+################################################################################
+#
+# OpenDKIM SigningTable.
+#
+# FreeBSD: /usr/local/etc/opendkim/SigningTable
+# Debian : /etc/opendkim/SigningTable
+# CentOS : /etc/opendkim/SigningTable
+#
+# Meer info: https://www.librobert.net/boek/internet
+#
+################################################################################
+#
+# Copyright (c) 2019 Robert LA LAU < https://www.librobert.net/ >
+#
+# Dit werk is gelicenseerd onder een Creative Commons Naamsvermelding 4.0 Internationaal licentie.
+# Bezoek http://creativecommons.org/licenses/by/4.0/ om een kopie te zien van de licentie
+# of stuur een brief naar Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+#
+################################################################################
+
+*@example.com  dkim._domainkey.example.com
+*@example.edu  dkim._domainkey.example.edu
+*@example.org  dkim._domainkey.example.org

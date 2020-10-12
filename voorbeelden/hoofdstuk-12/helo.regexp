@@ -1,0 +1,29 @@
+################################################################################
+#
+# Onacceptabele afzender hostnames Postfix.
+#
+# FreeBSD: /usr/local/etc/postfix/helo.regexp
+# Debian : /etc/postfix/helo.regexp
+# CentOS : /etc/postfix/helo.regexp
+#
+# Meer info: https://www.librobert.net/boek/internet
+#
+################################################################################
+#
+# Copyright (c) 2019 Robert LA LAU < https://www.librobert.net/ >
+#
+# Dit werk is gelicenseerd onder een Creative Commons Naamsvermelding 4.0 Internationaal licentie.
+# Bezoek http://creativecommons.org/licenses/by/4.0/ om een kopie te zien van de licentie
+# of stuur een brief naar Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+#
+################################################################################
+
+/^groen\.example\.com$/		550 Rejected
+/^mx\.example\.com$/		550 Rejected
+/^mail\.example\.com$/		550 Rejected
+/^smtp\.example\.com$/		550 Rejected
+/^imap\.example\.com$/		550 Rejected
+/^ns\.example\.com$/		550 Rejected
+/^www\.example\.com$/		550 Rejected
+/^198\.51\.100\.156$/		550 Rejected
+/^\[198\.51\.100\.156\]$/	550 Rejected

@@ -1,0 +1,37 @@
+/*******************************************************************************
+ *
+ * named configuratie voor zone 198.51.100 (reverse DNS).
+ *
+ * Toevoegen aan:
+ *  FreeBSD: /usr/local/etc/namedb/named.conf
+ *  Debian : /etc/bind/named.conf
+ *  CentOS : /etc/named.conf
+ *
+ * Meer info: https://www.librobert.net/boek/internet
+ *
+ *******************************************************************************
+ *
+ * Copyright (c) 2019 Robert LA LAU < https://www.librobert.net/ >
+ *
+ * Dit werk is gelicenseerd onder een Creative Commons Naamsvermelding 4.0 Internationaal licentie.
+ * Bezoek http://creativecommons.org/licenses/by/4.0/ om een kopie te zien van de licentie
+ * of stuur een brief naar Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+ *
+ ******************************************************************************/
+
+zone "100.51.198.in-addr.arpa" {
+	type master;
+
+	/*
+	 * FreeBSD : /usr/local/etc/namedb/master/198.51.100.zone
+	 * Debian  : /etc/bind/198.51.100.zone
+	 * CentOS  : /var/named/198.51.100.zone
+	 */
+	file "/usr/local/etc/namedb/master/198.51.100.zone";
+
+	allow-query { any; };
+
+	allow-transfer { slaves; };
+
+	notify yes;
+};
