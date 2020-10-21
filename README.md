@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/ohreally/configuratie-internetserver/main/banners/isbn-9789037257519-2.png" alt="Configuratie van een internetserver" width="200">
+<img src="https://raw.githubusercontent.com/ohreally/configuratie-internetserver/main/afbeeldingen/isbn-9789037257519-2.png" alt="Configuratie van een internetserver" width="200">
 
 # Configuratie van een internetserver
 
