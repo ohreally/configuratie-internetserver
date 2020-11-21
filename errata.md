@@ -11,8 +11,8 @@ Onder FreeBSD bestaat een *ACL entry* altijd uit slechts 3 velden: <code>user/gr
 Voor het instellen van *default ACL* onder FreeBSD wordt de <code>-d</code> parameter voor het <code>setfacl</code> commando gebruikt. Echter, voordat de *default ACL* voor een specifieke gebruiker of groep ingesteld kunnen worden, moeten eerst de algemene *default ACL* gedefinieerd worden.
 
 ```
-freebsd# setfacl -d -m u::rwx,g::r-x,o::--- /srv/www/www.example.com/docs
-freebsd# setfacl -d -m g:helpdesk:rwx /srv/www/www.example.com/docs
+freebsd# setfacl -d -m user::rwx,group::r-x,other::--- /srv/www/www.example.com/docs
+freebsd# setfacl -d -m group:helpdesk:rwx /srv/www/www.example.com/docs
 ```
 
 ---
