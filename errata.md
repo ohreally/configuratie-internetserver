@@ -69,7 +69,7 @@ freebsd# setfacl -d -m group:helpdesk:rwx /srv/www/www.example.com/docs
 
 Deze pagina bevat 2 lijsten, met daartussen een lopende tekst. Helaas is de scheiding tussen deze elementen onduidelijk.
 
-De eerste lijst bevat 4 elementen:
+De eerste lijst bevat 4 items:
 
 - <code>main</code>
 - <code>http</code>
@@ -78,7 +78,7 @@ De eerste lijst bevat 4 elementen:
 
 Dan volgt een lopende tekst; deze begint met "<em>Aanvullende configuratiebestanden kunnen ingevoegd worden [&hellip;]</em>".
 
-De tweede lijst begint met de volgende elementen, en loopt dan door op de volgende pagina:
+De tweede lijst begint met de volgende items, en loopt dan door op de volgende pagina:
 
 - <code>load_module "/pad/naar/modules/module.so";</code>
 - <code>worker_processes auto;</code>
