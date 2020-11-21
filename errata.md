@@ -29,7 +29,7 @@ freebsd# setfacl -d -m g:helpdesk:rwx /srv/www/www.example.com/docs
 
 ![Nee](afbeeldingen/nee.png) onder Apache heet dat een *alias* en Nginx noemt het een *location*
 
-![Ja](afbeeldingen/oui.png) Apache en Nginx noemen zo'n verwijzing een *alias*
+![Ja](afbeeldingen/ja.png) Apache en Nginx noemen zo'n verwijzing een *alias*
 
 > De alias wordt gedefinieerd in een *location* context; zie pagina 275: hoofdstuk *Webserver - deel 2*, paragraaf *Alias*.
 
