@@ -49,9 +49,9 @@ freebsd# setfacl -d -m g:helpdesk:rwx /srv/www/www.example.com/docs
 <code># setfacl -m default:user:www-groen:rx ./groen.example.com</code>
 
 ![Ja](afbeeldingen/ja.png)\
-<code>bsd# setfacl -d -m user::rwx,group::rx,o::- ./groen.example.com</code>\
-<code>bsd# setfacl -d -m user:www-groen:rx ./groen.example.com</code>\
-<code>linux# setfacl -m default:user:www-groen:rx ./groen.example.com</code>
+<code>**bsd# setfacl -d -m user::rwx,group::rx,o::- ./groen.example.com**</code>\
+<code>**bsd# setfacl -d -m user:www-groen:rx ./groen.example.com**</code>\
+<code>**linux**# setfacl -m default:user:www-groen:rx ./groen.example.com</code>
 
 > De *default ACL* worden onder FreeBSD anders gedefinieerd dan onder Linux; zie errata voor pagina 104.
 
@@ -65,7 +65,7 @@ freebsd# setfacl -d -m g:helpdesk:rwx /srv/www/www.example.com/docs
 
 ![Ja](afbeeldingen/ja.png)\
 <code>freebsd# setfacl -m user:www:rx .</code>\
-<code><strong>freebsd# setfacl -d -m user::rwx,group::rwx,other::\-\-\- .</strong></code>\
+<code>**freebsd# setfacl -d -m user::rwx,group::rwx,other::\-\-\- .</strong>**\
 <code>freebsd# setfacl -d -m user:www:rx .</code>
 
 > Voordat de *default ACL* voor specifieke gebruikers en groepen gedefinieerd kunnen worden, moeten eerst de algemene *default ACL* gedefinieerd worden; zie errata voor pagina 104.
@@ -78,9 +78,9 @@ freebsd# setfacl -d -m g:helpdesk:rwx /srv/www/www.example.com/docs
 <code># setfacl -m d:u:www-groen:rwx groen.example.com/tmp</code>
 
 ![Ja](afbeeldingen/ja.png)\
-<code>bsd# setfacl -d -m user::rwx,group::rx,o::- groen.example.com/tmp</code>\
-<code>bsd# setfacl -d -m user:www-groen:rwx groen.example.com/tmp</code>\
-<code>linux# setfacl -m d:u:www-groen:rwx groen.example.com/tmp</code>
+<code>**bsd# setfacl -d -m user::rwx,group::rx,o::- groen.example.com/tmp**</code>\
+<code>**bsd# setfacl -d -m user:www-groen:rwx groen.example.com/tmp**</code>\
+<code>**linux**# setfacl -m d:u:www-groen:rwx groen.example.com/tmp</code>
 
 > De *default ACL* worden onder FreeBSD anders gedefinieerd dan onder Linux; zie errata voor pagina 104.
 
