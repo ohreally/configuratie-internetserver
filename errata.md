@@ -2,6 +2,46 @@
 
 ---
 
+**Pagina 18**
+
+Het laatste item van de getoonde lijst bestaat uit slechts 1 alinea.
+
+De zin die begint met "<em>Om 'botsingen' te voorkomen</em>" en de zinnen die daarop volgen, maken geen deel uit van de lijst.
+
+---
+
+**Pagina 68**
+
+Het is niet duidelijk waar de lijst eindigt en waar de lopende tekst weer begint.
+
+Het laatste lijstitem eindigt voor de zin die begint met "<em>Hieronder volgt een eenvoudige maar effectieve aanzet [&hellip;]</em>".
+
+---
+
+**Pagina 71**
+
+Het is niet duidelijk waar de lijst eindigt en waar de lopende tekst weer begint.
+
+Het laatste lijstitem eindigt voor de zin die begint met "<em>Hieronder volgt een eenvoudige maar effectieve aanzet [&hellip;]</em>".
+
+---
+
+**Pagina 97**
+
+Deze pagina bevat 2 lijsten, met daartussen een lopende tekst. Helaas is de scheiding tussen deze elementen onduidelijk.
+
+De zin "<em>Met deze uitleg kunnen uit bovenstaande directory-listing de volgende conclusies getrokken worden:</em>" vormt de scheiding tussen de lijsten.
+
+---
+
+**Pagina 104**
+
+Deze pagina bevat 2 lijsten, met daartussen een lopende tekst. Helaas is de scheiding tussen deze elementen onduidelijk.
+
+De zin "<em>Een paar voorbeelden van ACL-entry's:</em>" vormt de scheiding tussen de lijsten.
+
+---
+
 **Pagina 104** : Default ACL.
 
 Het instellen van de *default ACL* onder FreeBSD werkt anders dan onder Linux.
@@ -22,6 +62,32 @@ freebsd# setfacl -d -m group:helpdesk:rwx /srv/www/www.example.com/docs
 ![Nee](afbeeldingen/nee.png) <code>freebsd# pkg **src** mod_</code>
 
 ![Ja](afbeeldingen/ja.png) <code>freebsd# pkg **search** mod_</code>
+
+---
+
+**Pagina 162**
+
+Deze pagina bevat 2 lijsten, met daartussen een lopende tekst. Helaas is de scheiding tussen deze elementen onduidelijk.
+
+De eerste lijst bevat 4 elementen:
+
+- <code>main</code>
+- <code>http</code>
+- <code>server</code>
+- <code>location</code>
+
+Dan volgt een lopende tekst; deze begint met "<em>Aanvullende configuratiebestanden kunnen ingevoegd worden [&hellip;]</em>".
+
+De tweede lijst begint met de volgende elementen, en loopt dan door op de volgende pagina:
+
+- <code>load_module "/pad/naar/modules/module.so";</code>
+- <code>worker_processes auto;</code>
+
+---
+
+**Pagina 164**
+
+De laatste alinea van paragraaf 9.3 en het voorbeeldcommando daaronder maken geen deel uit van het lijstitem daarboven.
 
 ---
 
@@ -99,3 +165,17 @@ freebsd# setfacl -d -m group:helpdesk:rwx /srv/www/www.example.com/docs
 ![Nee](afbeeldingen/nee.png) Het certificaat zal later gebruikt worden om de verbinding met e-mailclients te versleutelen, wanneer zij gebruik maken van het gedeelde adresboek.
 
 ![Ja](afbeeldingen/ja.png) Het certificaat zal gebruikt worden voor de versleuteing van het verkeer tussen desktop toepassingen, zoals Apache Directory Studio, en de server. Het TLS certificaat van *db.example.com* verzorgt de versleuteling van het verkeer tussen de gebruiker en phpLDAPadmin.
+
+---
+
+**Pagina 273**
+
+Het is niet duidelijk waar de lijst op deze pagina ophoudt.
+
+De lopende tekst die volgt op het laatste lijstitem begint met "<em>Eén niet eerder behandelde parameter wordt toegevoegd aan de webserverconfiguratie: [&hellip;]</em>".
+
+---
+
+**Pagina 305/306**
+
+De tekst die begint op pagina 306 maakt geen deel uit van het laatste item van de lijst op pagina 305.
