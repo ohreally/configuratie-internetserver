@@ -31,7 +31,7 @@ freebsd# setfacl -d -m g:helpdesk:rwx /srv/www/www.example.com/docs
 
 ![Ja](afbeeldingen/ja.png) Apache en Nginx noemen zo'n verwijzing een *alias*
 
-> De alias wordt gedefinieerd in een *location* context; zie pagina 275: hoofdstuk *Webserver - deel 2*, paragraaf *Alias*.
+> De alias wordt voor Nginx gedefinieerd in een *location* context; zie pagina 277: hoofdstuk *Webserver - deel 2*, paragraaf *Alias*.
 
 ---
 
