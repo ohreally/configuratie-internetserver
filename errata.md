@@ -65,7 +65,7 @@ freebsd# setfacl -d -m g:helpdesk:rwx /srv/www/www.example.com/docs
 
 ![Ja](afbeeldingen/ja.png)\
 <code>freebsd# setfacl -m user:www:rx .</code>\
-<code>**freebsd# setfacl -d -m user::rwx,group::rwx,other::\-\-\- .</strong>**\
+<code>**freebsd# setfacl -d -m user::rwx,group::rwx,other::\-\-\- .</strong>**</code>\
 <code>freebsd# setfacl -d -m user:www:rx .</code>
 
 > Voordat de *default ACL* voor specifieke gebruikers en groepen gedefinieerd kunnen worden, moeten eerst de algemene *default ACL* gedefinieerd worden; zie errata voor pagina 104.
