@@ -25,6 +25,14 @@ freebsd# setfacl -d -m g:helpdesk:rwx /srv/www/www.example.com/docs
 
 ---
 
+**Pagina 165** : Inschakelen van PHP-FPM onder FreeBSD.
+
+![Nee](afbeeldingen/nee.png) <code>freebsd# service **enable php-fpm**</code>
+
+![Ja](afbeeldingen/ja.png) <code>freebsd# service **php-fpm enable**</code>
+
+---
+
 **Pagina 171** : De directory <code>alias</code> voor een virtual host of server.
 
 ![Nee](afbeeldingen/nee.png) onder Apache heet dat een *alias* en Nginx noemt het een *location*
@@ -82,7 +90,7 @@ freebsd# setfacl -d -m g:helpdesk:rwx /srv/www/www.example.com/docs
 
 ![Nee](afbeeldingen/nee.png) De configuratiebestanden [&hellip;] <code>/etc/phpldapadmin</code>.
 
-![Ja](afbeeldingen/ja.png) De configuratiebestanden [&hellip;] <code>/etc/phpldapadmin</code> (<code>/usr/local/www/phpldapadmin/config</code> op FreeBSD).
+![Ja](afbeeldingen/ja.png) De configuratiebestanden [&hellip;] <code>/etc/phpldapadmin</code> **(<code>/usr/local/www/phpldapadmin/config</code> op FreeBSD)**.
 
 ---
 
