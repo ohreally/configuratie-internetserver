@@ -35,7 +35,7 @@ freebsd# setfacl -d -m g:helpdesk:rwx /srv/www/www.example.com/docs
 
 ---
 
-**Pagina 172** : De default ACL onder FreeBSD.
+**Pagina 172** : De *default ACL* onder FreeBSD.
 
 ![Nee](afbeeldingen/nee.png)\
 <code># setfacl -m default:user:www-groen:rx ./groen.example.com</code>
@@ -43,14 +43,13 @@ freebsd# setfacl -d -m g:helpdesk:rwx /srv/www/www.example.com/docs
 ![Ja](afbeeldingen/ja.png)\
 <code>bsd# setfacl -d -m user::rwx,group::rx,o::- ./groen.example.com</code>\
 <code>bsd# setfacl -d -m user:www-groen:rx ./groen.example.com</code>\
-\
 <code>linux# setfacl -m default:user:www-groen:rx ./groen.example.com</code>
 
 > De *default ACL* worden onder FreeBSD anders gedefinieerd dan onder Linux; zie errata voor pagina 104.
 
 ---
 
-**Pagina 172** : De default ACL onder FreeBSD.
+**Pagina 172** : De *default ACL* onder FreeBSD.
 
 ![Nee](afbeeldingen/nee.png)\
 <code>freebsd# setfacl -m user:www:rx .</code>\
@@ -65,7 +64,7 @@ freebsd# setfacl -d -m g:helpdesk:rwx /srv/www/www.example.com/docs
 
 ---
 
-**Pagina 173** : De default ACL onder FreeBSD.
+**Pagina 173** : De *default ACL* onder FreeBSD.
 
 ![Nee](afbeeldingen/nee.png)\
 <code># setfacl -m d:u:www-groen:rwx groen.example.com/tmp</code>
@@ -73,7 +72,6 @@ freebsd# setfacl -d -m g:helpdesk:rwx /srv/www/www.example.com/docs
 ![Ja](afbeeldingen/ja.png)\
 <code>bsd# setfacl -d -m user::rwx,group::rx,o::- groen.example.com/tmp</code>\
 <code>bsd# setfacl -d -m user:www-groen:rwx groen.example.com/tmp</code>\
-\
 <code>linux# setfacl -m d:u:www-groen:rwx groen.example.com/tmp</code>
 
 > De *default ACL* worden onder FreeBSD anders gedefinieerd dan onder Linux; zie errata voor pagina 104.
@@ -92,4 +90,4 @@ freebsd# setfacl -d -m g:helpdesk:rwx /srv/www/www.example.com/docs
 
 ![Nee](afbeeldingen/nee.png) Het certificaat zal later gebruikt worden om de verbinding met e-mailclients te versleutelen, wanneer zij gebruik maken van het gedeelde adresboek.
 
-![Ja](afbeeldingen/ja.png) Het certificaat zal gebruikt worden voor de versleuteing van het verkeer tussen desktop toepassingen, zoals Apache Directory Studio, en de server. Het TLS certificaat van db.example.com verzorgt de versleuteling van het verkeer tussen de gebruiker en phpLDAPadmin.
+![Ja](afbeeldingen/ja.png) Het certificaat zal gebruikt worden voor de versleuteing van het verkeer tussen desktop toepassingen, zoals Apache Directory Studio, en de server. Het TLS certificaat van *db.example.com* verzorgt de versleuteling van het verkeer tussen de gebruiker en phpLDAPadmin.
