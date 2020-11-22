@@ -59,9 +59,11 @@ freebsd# setfacl -d -m group:helpdesk:rwx /srv/www/www.example.com/docs
 
 **Pagina 153** : Apache modules zoeken op FreeBSD.
 
-![Nee](afbeeldingen/nee.png) <code>freebsd# pkg **src** mod_</code>
+![Nee](afbeeldingen/nee.png)
+<pre>freebsd# pkg <strong>src</strong> mod_</pre>
 
-![Ja](afbeeldingen/ja.png) <code>freebsd# pkg **search** mod_</code>
+![Ja](afbeeldingen/ja.png)
+<pre>freebsd# pkg <strong>search</strong> mod_</pre>
 
 ---
 
@@ -93,17 +95,21 @@ De laatste alinea van paragraaf 9.3 en het voorbeeldcommando daaronder maken gee
 
 **Pagina 165** : Inschakelen van PHP-FPM onder FreeBSD.
 
-![Nee](afbeeldingen/nee.png) <code>freebsd# service **enable php-fpm**</code>
+![Nee](afbeeldingen/nee.png)
+<pre>freebsd# service <strong>enable php-fpm</strong></pre>
 
-![Ja](afbeeldingen/ja.png) <code>freebsd# service **php-fpm enable**</code>
+![Ja](afbeeldingen/ja.png)
+<pre>freebsd# service <strong>php-fpm enable</strong></pre>
 
 ---
 
 **Pagina 171** : De directory <code>alias</code> voor een virtual host of server.
 
-![Nee](afbeeldingen/nee.png) onder Apache heet dat een *alias* en Nginx noemt het een *location*
+![Nee](afbeeldingen/nee.png)\
+onder Apache heet dat een *alias* en Nginx noemt het een *location*
 
-![Ja](afbeeldingen/ja.png) Apache en Nginx noemen zo'n verwijzing een *alias*
+![Ja](afbeeldingen/ja.png)\
+Apache en Nginx noemen zo'n verwijzing een *alias*
 
 > De alias wordt voor Nginx gedefinieerd in een *location* context; zie pagina 277: hoofdstuk *Webserver - deel 2*, paragraaf *Alias*.
 
@@ -111,13 +117,13 @@ De laatste alinea van paragraaf 9.3 en het voorbeeldcommando daaronder maken gee
 
 **Pagina 172** : De *default ACL* onder FreeBSD.
 
-![Nee](afbeeldingen/nee.png)\
-<code># setfacl -m default:user:www-groen:rx ./groen.example.com</code>
+![Nee](afbeeldingen/nee.png)
+<pre># setfacl -m default:user:www-groen:rx ./groen.example.com</pre>
 
-![Ja](afbeeldingen/ja.png)\
-<code>**bsd# setfacl -d -m user::rwx,group::rx,o::- ./groen.example.com**</code>\
-<code>**bsd# setfacl -d -m user:www-groen:rx ./groen.example.com**</code>\
-<code>**linux**# setfacl -m default:user:www-groen:rx ./groen.example.com</code>
+![Ja](afbeeldingen/ja.png)
+<pre><strong>bsd# setfacl -d -m user::rwx,group::rx,o::- ./groen.example.com
+bsd# setfacl -d -m user:www-groen:rx ./groen.example.com
+linux</strong># setfacl -m default:user:www-groen:rx ./groen.example.com</pre>
 
 > De *default ACL* worden onder FreeBSD anders gedefinieerd dan onder Linux; zie errata voor pagina 104.
 
@@ -125,14 +131,14 @@ De laatste alinea van paragraaf 9.3 en het voorbeeldcommando daaronder maken gee
 
 **Pagina 172** : De *default ACL* onder FreeBSD.
 
-![Nee](afbeeldingen/nee.png)\
-<code>freebsd# setfacl -m user:www:rx .</code>\
-<code>freebsd# setfacl -d -m user:www:rx .</code>
+![Nee](afbeeldingen/nee.png)
+<pre>freebsd# setfacl -m user:www:rx .
+freebsd# setfacl -d -m user:www:rx .</pre>
 
-![Ja](afbeeldingen/ja.png)\
-<code>freebsd# setfacl -m user:www:rx .</code>\
-<code>**freebsd# setfacl -d -m user::rwx,group::rwx,other::\-\-\- .</strong>**</code>\
-<code>freebsd# setfacl -d -m user:www:rx .</code>
+![Ja](afbeeldingen/ja.png)
+<pre>freebsd# setfacl -m user:www:rx .
+<strong>freebsd# setfacl -d -m user::rwx,group::rwx,other::\-\-\- .</strong>
+freebsd# setfacl -d -m user:www:rx .</pre>
 
 > Voordat de *default ACL* voor specifieke gebruikers en groepen gedefinieerd kunnen worden, moeten eerst de algemene *default ACL* gedefinieerd worden; zie errata voor pagina 104.
 
@@ -140,13 +146,13 @@ De laatste alinea van paragraaf 9.3 en het voorbeeldcommando daaronder maken gee
 
 **Pagina 173** : De *default ACL* onder FreeBSD.
 
-![Nee](afbeeldingen/nee.png)\
-<code># setfacl -m d:u:www-groen:rwx groen.example.com/tmp</code>
+![Nee](afbeeldingen/nee.png)
+<pre># setfacl -m d:u:www-groen:rwx groen.example.com/tmp</pre>
 
-![Ja](afbeeldingen/ja.png)\
-<code>**bsd# setfacl -d -m user::rwx,group::rx,o::- groen.example.com/tmp**</code>\
-<code>**bsd# setfacl -d -m user:www-groen:rwx groen.example.com/tmp**</code>\
-<code>**linux**# setfacl -m d:u:www-groen:rwx groen.example.com/tmp</code>
+![Ja](afbeeldingen/ja.png)
+<pre><strong>bsd# setfacl -d -m user::rwx,group::rx,o::- groen.example.com/tmp
+bsd# setfacl -d -m user:www-groen:rwx groen.example.com/tmp
+linux</strong># setfacl -m d:u:www-groen:rwx groen.example.com/tmp</pre>
 
 > De *default ACL* worden onder FreeBSD anders gedefinieerd dan onder Linux; zie errata voor pagina 104.
 
@@ -154,13 +160,13 @@ De laatste alinea van paragraaf 9.3 en het voorbeeldcommando daaronder maken gee
 
 **Pagina 176/177** : Nginx configuratie; logbestanden.
 
-![Nee](afbeeldingen/nee.png)\
-<code>access_log /var/log/www-groen.log</code>\
-<code>error_log /var/log/www-groen.error</code>
+![Nee](afbeeldingen/nee.png)
+<pre>access_log /var/log/www-groen.log
+error_log /var/log/www-groen.error</pre>
 
-![Ja](afbeeldingen/ja.png)\
-<code>access_log /var/log/www-groen.log**;**</code>\
-<code>error_log /var/log/www-groen.error**;**</code>
+![Ja](afbeeldingen/ja.png)
+<pre>access_log /var/log/www-groen.log<strong>;</strong>
+error_log /var/log/www-groen.error<strong>;</strong></pre>
 
 > Configuratie-instructies voor Nginx eindigen altijd op een puntkomma.
 
@@ -170,21 +176,21 @@ De laatste alinea van paragraaf 9.3 en het voorbeeldcommando daaronder maken gee
 
 **Pagina 176/177** : Nginx configuratie; *location* context.
 
-![Nee](afbeeldingen/nee.png)\
-<code>location / {</code>\
-<code>  [&hellip;]</code>\
-<code>}</code>\
-<code>location ~ \\.php$ {</code>\
-<code>  [&hellip;]</code>\
-<code>}</code>
+![Nee](afbeeldingen/nee.png)
+<pre>location / {
+  [&hellip;]
+}
+location ~ \.php$ {
+  [&hellip;]
+}</pre>
 
-![Ja](afbeeldingen/ja.png)\
-<code>location / {</code>\
-<code>  [&hellip;]</code>\
-<code>  location ~ \\.php$ {</code>\
-<code>    [&hellip;]</code>\
-<code>  }</code>\
-<code>}</code>
+![Ja](afbeeldingen/ja.png)
+<pre>location / {
+  [&hellip;]
+  location ~ \.php$ {
+    [&hellip;]
+  }
+}</pre>
 
 > De tweede *location* context, voor PHP-bestanden, hoort in de eerste *location* context.
 
@@ -194,17 +200,21 @@ De laatste alinea van paragraaf 9.3 en het voorbeeldcommando daaronder maken gee
 
 **Pagina 219** : De configuratiebestanden van phpLDAPadmin.
 
-![Nee](afbeeldingen/nee.png) De configuratiebestanden [&hellip;] <code>/etc/phpldapadmin</code>.
+![Nee](afbeeldingen/nee.png)\
+De configuratiebestanden [&hellip;] <code>/etc/phpldapadmin</code>.
 
-![Ja](afbeeldingen/ja.png) De configuratiebestanden [&hellip;] <code>/etc/phpldapadmin</code> **(<code>/usr/local/www/phpldapadmin/config</code> op FreeBSD)**.
+![Ja](afbeeldingen/ja.png)\
+De configuratiebestanden [&hellip;] <code>/etc/phpldapadmin</code> **(<code>/usr/local/www/phpldapadmin/config</code> op FreeBSD)**.
 
 ---
 
 **Pagina 220** : Het uitschakelen van TLS versleuteling voor phpLDAPadmin.
 
-![Nee](afbeeldingen/nee.png) Het certificaat zal later gebruikt worden om de verbinding met e-mailclients te versleutelen, wanneer zij gebruik maken van het gedeelde adresboek.
+![Nee](afbeeldingen/nee.png)\
+Het certificaat zal later gebruikt worden om de verbinding met e-mailclients te versleutelen, wanneer zij gebruik maken van het gedeelde adresboek.
 
-![Ja](afbeeldingen/ja.png) Het certificaat zal gebruikt worden voor de versleuteing van het verkeer tussen desktop toepassingen, zoals Apache Directory Studio, en de server. Het TLS certificaat van *db.example.com* verzorgt de versleuteling van het verkeer tussen de gebruiker en phpLDAPadmin.
+![Ja](afbeeldingen/ja.png)\
+Het certificaat zal gebruikt worden voor de versleuteing van het verkeer tussen desktop toepassingen, zoals Apache Directory Studio, en de server. Het TLS certificaat van *db.example.com* verzorgt de versleuteling van het verkeer tussen de gebruiker en phpLDAPadmin.
 
 ---
 
