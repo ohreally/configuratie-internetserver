@@ -152,6 +152,46 @@ De laatste alinea van paragraaf 9.3 en het voorbeeldcommando daaronder maken gee
 
 ---
 
+**Pagina 176/177** : Nginx configuratie; logbestanden.
+
+![Nee](afbeeldingen/nee.png)\
+<code>access_log /var/log/www-groen.log</code>\
+<code>error_log /var/log/www-groen.error</code>
+
+![Ja](afbeeldingen/ja.png)\
+<code>access_log /var/log/www-groen.log**;**</code>\
+<code>error_log /var/log/www-groen.error**;**</code>
+
+> Configuratie-instructies voor Nginx eindigen altijd op een puntkomma.
+
+> &rarr; 3x
+
+---
+
+**Pagina 176/177** : Nginx configuratie; *location* context.
+
+![Nee](afbeeldingen/nee.png)\
+<code>location / {</code>\
+<code>  [&hellip;]</code>\
+<code>}</code>\
+<code>location ~ \\.php$ {</code>\
+<code>  [&hellip;]</code>\
+<code>}</code>
+
+![Ja](afbeeldingen/ja.png)\
+<code>location / {</code>\
+<code>  [&hellip;]</code>\
+<code>  location ~ \\.php$ {</code>\
+<code>    [&hellip;]</code>\
+<code>  }</code>\
+<code>}</code>
+
+> De tweede *location* context, voor PHP-bestanden, hoort in de eerste *location* context.
+
+> &rarr; 3x
+
+---
+
 **Pagina 219** : De configuratiebestanden van phpLDAPadmin.
 
 ![Nee](afbeeldingen/nee.png) De configuratiebestanden [&hellip;] <code>/etc/phpldapadmin</code>.
