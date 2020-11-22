@@ -198,6 +198,100 @@ location ~ \.php$ {
 
 ---
 
+**Pagina 195/196** : Nginx virtual server configuratie.
+
+De *http* context hoort niet in deze configuratie; deze configuratie bevat alleen 2 *server* contexts.
+
+---
+
+**Pagina 196** : Nginx virtual server configuratie.
+
+![Nee](afbeeldingen/nee.png)
+<pre>location / {
+  [&hellip;]
+}
+location ~ \.php$ {
+  [&hellip;]
+}</pre>
+
+![Ja](afbeeldingen/ja.png)
+<pre>location / {
+  [&hellip;]
+  location ~ \.php$ {
+    [&hellip;]
+  }
+}</pre>
+
+> De derde *location* context, voor PHP-bestanden, hoort in de tweede *location* context.
+
+---
+
+**Pagina 201** : Nginx configuratie phpMyAdmin.
+
+![Nee](afbeeldingen/nee.png)
+<pre>location /mariadb {
+  alias /usr/local/www/phpMyAdmin;
+}</pre>
+
+![Ja](afbeeldingen/ja.png)
+<pre>location /mariadb {
+  alias /usr/local/www/phpMyAdmin;
+  <strong>location ~ \.php$ {
+    fastcgi_pass 127.0.0.1:9001;
+    fastcgi_index index.php;
+    fastcgi_param SCRIPT_FILENAME $request_filename;
+    include fastcgi_params;
+  }</strong>
+}</pre>
+
+> De instructies voor PHP-FPM zijn hier verloren gegaan.
+
+---
+
+**Pagina 206** : Nginx configuratie phpPgAdmin.
+
+![Nee](afbeeldingen/nee.png)
+<pre>location /postgres {
+  alias /usr/local/www/phpPgAdmin;
+}</pre>
+
+![Ja](afbeeldingen/ja.png)
+<pre>location /postgres {
+  alias /usr/local/www/phpPgAdmin;
+  <strong>location ~ \.php$ {
+    fastcgi_pass 127.0.0.1:9001;
+    fastcgi_index index.php;
+    fastcgi_param SCRIPT_FILENAME $request_filename;
+    include fastcgi_params;
+  }</strong>
+}</pre>
+
+> De instructies voor PHP-FPM zijn hier verloren gegaan.
+
+---
+
+**Pagina 219** : Nginx configuratie phpLDAPadmin.
+
+![Nee](afbeeldingen/nee.png)
+<pre>location /ldap {
+  alias /usr/local/www/phpldapadmin/htdocs;
+}</pre>
+
+![Ja](afbeeldingen/ja.png)
+<pre>location /ldap {
+  alias /usr/local/www/phpldapadmin/htdocs;
+  <strong>location ~ \.php$ {
+    fastcgi_pass 127.0.0.1:9001;
+    fastcgi_index index.php;
+    fastcgi_param SCRIPT_FILENAME $request_filename;
+    include fastcgi_params;
+  }</strong>
+}</pre>
+
+> De instructies voor PHP-FPM zijn hier verloren gegaan.
+
+---
+
 **Pagina 219** : De configuratiebestanden van phpLDAPadmin.
 
 ![Nee](afbeeldingen/nee.png)\
