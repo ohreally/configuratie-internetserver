@@ -200,7 +200,25 @@ location ~ \.php$ {
 
 **Pagina 195/196** : Nginx virtual server configuratie.
 
-De *http* context hoort niet in deze configuratie; deze configuratie bevat alleen 2 *server* contexts.
+![Nee](afbeeldingen/nee.png)
+<pre>http {
+  server {
+    [&hellip;]
+  }
+  server {
+    [&hellip;]
+  }
+}</pre>
+
+![Ja](afbeeldingen/ja.png)
+<pre>server {
+  [&hellip;]
+}
+server {
+  [&hellip;]
+}</pre>
+
+> De *http* context hoort niet in deze configuratie; deze configuratie bevat alleen 2 *server* contexts.
 
 ---
 
