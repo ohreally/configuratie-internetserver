@@ -330,6 +330,18 @@ Het certificaat zal gebruikt worden voor de versleuteing van het verkeer tussen 
 
 ---
 
+**Pagina 247** : Het Postfix configuratiebestand *master.cf*.
+
+![Nee](afbeeldingen/nee.png)\
+In het bestand <code>master.conf</code> [&hellip;]
+
+![Ja](afbeeldingen/ja.png)\
+In het bestand <code>master.cf</code> [&hellip;]
+
+> Dit bestand heet *master.cf*, zoals een paar regels eerder aangegeven.
+
+---
+
 **Pagina 273**
 
 Het is niet duidelijk waar de lijst op deze pagina ophoudt.
