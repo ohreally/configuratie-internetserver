@@ -342,6 +342,18 @@ In het bestand <code>master.cf</code> [&hellip;]
 
 ---
 
+**Pagina 255**: De eerste alinea over *DNSBL*.
+
+![Nee](afbeeldingen/nee.png)\
+[&hellip] stuurt het IP-adres van de afzender van de mail **(of dat** als *DNS request* naar de DNSBL; [&hellip]
+
+![Ja](afbeeldingen/ja.png)\
+[&hellip] stuurt het IP-adres van de afzender van de mail als *DNS request* naar de DNSBL; [&hellip]
+
+> Hier is een deel van een verwijderde tekst achtergebleven.
+
+---
+
 **Pagina 273**
 
 Het is niet duidelijk waar de lijst op deze pagina ophoudt.
