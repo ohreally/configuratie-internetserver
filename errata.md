@@ -354,6 +354,16 @@ In het bestand <code>master.cf</code> [&hellip;]
 
 ---
 
+**Pagina 262** : Bogofilter.
+
+![Nee](afbeeldingen/nee.png)\
+Bogofilter is een lerende, zogenaamde *Baysian* spamfilter.
+
+![Ja](afbeeldingen/ja.png)\
+Bogofilter is een lerende, zogenaamde *Bay**e**sian* spamfilter.
+
+---
+
 **Pagina 273**
 
 Het is niet duidelijk waar de lijst op deze pagina ophoudt.
