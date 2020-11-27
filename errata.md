@@ -2,6 +2,16 @@
 
 ---
 
+**Algemeen**
+
+Gelieve voor vragen en opmerkingen over de vormgeving en de oefeningen direct contact op te nemen met <a href="mailto:service@boomberoepsonderwijs.nl">Boom Beroepsonderwijs</a>.
+Ik heb hier helaas geen invloed op.
+
+Ik verontschuldig me voor de soms weinig professionele toon van de oefeningen.
+Deze oefeningen zijn toegevoegd door de uitgever, en zijn niet door mij geschreven.
+
+---
+
 **Pagina 18**
 
 Het laatste item van de getoonde lijst bestaat uit slechts 1 alinea.
