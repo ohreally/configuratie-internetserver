@@ -67,6 +67,14 @@ freebsd# setfacl -d -m group:helpdesk:rwx /srv/www/www.example.com/docs
 
 ---
 
+**Pagina 141/142** : *Inloggen met een sleutel* onder *Unix*.
+
+> Bij het bewerken van de tekst is de laatste alinea van deze paragraaf verloren gegaan. Deze alinea luidt als volgt:
+
+De toepassing <code>ssh-agent</code>, die samen met de SSH-client is geïnstalleerd, kan gebruikt worden om de sleutel(s) in het geheugen te houden, zodat de gebruiker het wachtwoord slechts een enkele keer hoeft in te geven. Meer informatie over deze toepassing in <code>ssh-agent(1)</code>.
+
+---
+
 **Pagina 153** : Apache modules zoeken op FreeBSD.
 
 ![Nee](afbeeldingen/nee.png)
