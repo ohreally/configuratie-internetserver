@@ -5,10 +5,7 @@
 **Algemeen**
 
 Gelieve voor vragen en opmerkingen over de vormgeving en de oefeningen direct contact op te nemen met <a href="mailto:service@boomberoepsonderwijs.nl">Boom Beroepsonderwijs</a>.
-Ik heb hier helaas geen invloed op.
-
-Ik verontschuldig me voor de soms weinig professionele toon van de oefeningen.
-Deze oefeningen zijn toegevoegd door de uitgever, en zijn niet door mij geschreven.
+Deze zijn verzorgd door de uitgever, en ik heb hier weinig tot geen invloed op.
 
 ---
 
@@ -33,6 +30,18 @@ Het laatste lijstitem eindigt voor de zin die begint met "<em>Hieronder volgt ee
 Het is niet duidelijk waar de lijst eindigt en waar de lopende tekst weer begint.
 
 Het laatste lijstitem eindigt voor de zin die begint met "<em>Hieronder volgt een eenvoudige maar effectieve aanzet [&hellip;]</em>".
+
+---
+
+**Pagina 83** : De skeleton directory op FreeBSD.
+
+![Nee](afbeeldingen/nee.png)\
+[&hellip;] worden hernoemd bij het kopiëren: *dot.profile* wordt ***.pro-file***, [&hellip;]
+
+![Ja](afbeeldingen/ja.png)\
+[&hellip;] worden hernoemd bij het kopiëren: *dot.profile* wordt ***.profile***, [&hellip;]
+
+> Een fout in de vormgeving maakt dat de tekst hier suggereert dat het bestand *.profile* een streepje in de naam zou kunnen hebben; dat is niet het geval.
 
 ---
 
@@ -369,6 +378,18 @@ In het bestand <code>master.cf</code> [&hellip;]
 [&hellip;] stuurt het IP-adres van de afzender van de mail als *DNS request* naar de DNSBL; [&hellip;]
 
 > Hier is een deel van een verwijderde tekst achtergebleven.
+
+---
+
+**Pagina 260** : Configuratiebestanden voor OpenDKIM.
+
+![Nee](afbeeldingen/nee.png)\
+Om de sleutels te koppelen aan domeinen worden de bestanden *KeyTable* en ***Signing-Table*** gebruikt.
+
+![Ja](afbeeldingen/ja.png)\
+Om de sleutels te koppelen aan domeinen worden de bestanden *KeyTable* en ***SigningTable*** gebruikt.
+
+> Een fout in de vormgeving maakt dat de tekst hier suggereert dat het bestand *SigningTable* een streepje in de naam zou kunnen hebben; dat is niet het geval.
 
 ---
 
