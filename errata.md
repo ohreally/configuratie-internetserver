@@ -207,16 +207,16 @@ error_log /var/log/www-groen.error<strong>;</strong></pre>
 <pre>location / {
   [&hellip;]
 }
-location ~ \.php$ {
+<strong>location ~ \.php$ {
   [&hellip;]
-}</pre>
+}</strong></pre>
 
 ![Ja](afbeeldingen/ja.png)
 <pre>location / {
   [&hellip;]
-  location ~ \.php$ {
+  <strong>location ~ \.php$ {
     [&hellip;]
-  }
+  }</strong>
 }</pre>
 
 > De tweede *location* context, voor PHP-bestanden, hoort in de eerste *location* context.
@@ -225,17 +225,58 @@ location ~ \.php$ {
 
 ---
 
+**Pagina 194** : ACL voor de directory's.
+
+![Nee](afbeeldingen/nee.png)
+<pre>freebsd# setfacl -m user:www:rx .
+<strong>freebsd# setfacl -m default:user:www:rx .</strong>
+[&hellip;]
+# setfacl -m user:www-db:rx .
+<strong># setfacl -m default:user:www-db:rx .</strong>
+# mkdir ./{alias,bin,cgi-bin,conf,htdocs,tmp}
+# setfacl -m user:www-db:rwx ./tmp
+<strong># setfacl -m default:user:www-db:rwx ./tmp</strong>
+# echo "<p>db.example.com</p>" > ./htdocs/index.html
+</pre>
+
+![Ja](afbeeldingen/ja.png)
+<pre>freebsd# setfacl -m user:www:rx .
+<strong>freebsd# setfacl -d -m user::rwx,group::rwx,other::---
+freebsd# setfacl -d -m user:www:rx .</strong>
+[&hellip;]
+# setfacl -m user:www-db:rx .
+
+<strong>bsd# setfacl -d -m user::rwx,group::rwx,other::---
+bsd# setfacl -d -m user:www-db:rx .
+
+linux# setfacl -m default:user:www-db:rx .</strong>
+
+# mkdir ./{alias,bin,cgi-bin,conf,htdocs,tmp}
+# setfacl -m user:www-db:rwx ./tmp
+
+<strong>bsd# setfacl -d -m user::r-x,group::r-x,other::--- ./tmp
+bsd# setfacl -d -m user:www-db:rwx ./tmp
+
+linux# setfacl -m default:user:www-db:rwx ./tmp</strong>
+
+# echo "&lt;p&gt;db.example.com&lt;/p&gt;" &gt; ./htdocs/index.html
+</pre>
+
+> De *default ACL* worden onder FreeBSD anders gedefinieerd dan onder Linux; zie errata voor pagina 104.
+
+---
+
 **Pagina 195/196** : Nginx virtual server configuratie.
 
 ![Nee](afbeeldingen/nee.png)
-<pre>http {
+<pre><strong>http {</strong>
   server {
     [&hellip;]
   }
   server {
     [&hellip;]
   }
-}</pre>
+<strong>}</strong></pre>
 
 ![Ja](afbeeldingen/ja.png)
 <pre>server {
@@ -245,7 +286,7 @@ server {
   [&hellip;]
 }</pre>
 
-> De *http* context hoort niet in deze configuratie; deze configuratie bevat alleen 2 *server* contexts.
+> Aangezien de configuraties voor de virtual servers worden ingevoegd in de *http* context (zie pagina 164, hoofdstuk *Webserver - deel&nbsp;1*, paragraaf *Nginx*, *Configuratie*), hoort de *http* context niet in deze configuratie; deze configuratie bevat alleen 2 *server* contexts.
 
 ---
 
@@ -255,16 +296,16 @@ server {
 <pre>location / {
   [&hellip;]
 }
-location ~ \.php$ {
+<strong>location ~ \.php$ {
   [&hellip;]
-}</pre>
+}</strong></pre>
 
 ![Ja](afbeeldingen/ja.png)
 <pre>location / {
   [&hellip;]
-  location ~ \.php$ {
+  <strong>location ~ \.php$ {
     [&hellip;]
-  }
+  }</strong>
 }</pre>
 
 > De derde *location* context, voor PHP-bestanden, hoort in de tweede *location* context.
@@ -360,10 +401,10 @@ Het certificaat zal gebruikt worden voor de versleuteing van het verkeer tussen 
 **Pagina 247** : Het Postfix configuratiebestand *master.cf*.
 
 ![Nee](afbeeldingen/nee.png)\
-In het bestand <code>master.conf</code> [&hellip;]
+In het bestand <code>master.**conf**</code> [&hellip;]
 
 ![Ja](afbeeldingen/ja.png)\
-In het bestand <code>master.cf</code> [&hellip;]
+In het bestand <code>master.**cf**</code> [&hellip;]
 
 > Dit bestand heet *master.cf*, zoals een paar regels eerder aangegeven.
 
@@ -408,6 +449,30 @@ Bogofilter is een lerende, zogenaamde *Bay**e**sian* spamfilter.
 Het is niet duidelijk waar de lijst op deze pagina ophoudt.
 
 De lopende tekst die volgt op het laatste lijstitem begint met "<em>Eén niet eerder behandelde parameter wordt toegevoegd aan de webserverconfiguratie: [&hellip;]</em>".
+
+---
+
+**Pagina 284/285** : Nginx WebDAV configuratie.
+
+![Nee](afbeeldingen/nee.png)
+<pre><strong>http {</strong>
+  server {
+    [&hellip;]
+  }
+  server {
+    [&hellip;]
+  }
+<strong>}</strong></pre>
+
+![Ja](afbeeldingen/ja.png)
+<pre>server {
+  [&hellip;]
+}
+server {
+  [&hellip;]
+}</pre>
+
+> Aangezien de configuraties voor de virtual servers worden ingevoegd in de *http* context (zie pagina 164, hoofdstuk *Webserver - deel&nbsp;1*, paragraaf *Nginx*, *Configuratie*), hoort de *http* context niet in deze configuratie; deze configuratie bevat alleen 2 *server* contexts.
 
 ---
 
