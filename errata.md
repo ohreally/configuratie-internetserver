@@ -27,7 +27,7 @@ De zin die begint met "<em>Om 'botsingen' te voorkomen</em>" en de zinnen die da
 
 > Het herstarten van de netwerkinterface verwijdert alle routes uit de routing table; het herstarten van de *routing* service creëert ze opnieuw. Deze twee diensten moeten in een enkel commando worden herstart.
 
-> Als de *routing* service niet wordt herstart na het herstarten van de *netif* service, wordt de server onbereikbaar, en moet dan gereboot worden.
+> Als de *routing* service niet wordt herstart na het herstarten van de *netif* service, wordt de server onbereikbaar, en moet dan gereboot worden. Dit geldt uiteraard alleen wanneer de server van afstand (bijv. via SSH) beheerd wordt.
 
 ---
 
