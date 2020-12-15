@@ -17,6 +17,20 @@ De zin die begint met "<em>Om 'botsingen' te voorkomen</em>" en de zinnen die da
 
 ---
 
+**Pagina 62** : Herstarten van de service *netif*.
+
+![Nee](afbeeldingen/nee.png)
+<pre>freebsd# service netif restart</pre>
+
+![Ja](afbeeldingen/ja.png)
+<pre>freebsd# service netif restart<strong> && service routing restart</strong></pre>
+
+> Het herstarten van de netwerkinterface verwijdert alle routes uit de routing table; het herstarten van de *routing* service creëert ze opnieuw. Deze twee diensten moeten in een enkel commando worden herstart.
+
+> Als de *routing* service niet wordt herstart na het herstarten van de *netif* service, wordt de server onbereikbaar, en moet dan gereboot worden.
+
+---
+
 **Pagina 68**
 
 Het is niet duidelijk waar de lijst eindigt en waar de lopende tekst weer begint.
@@ -453,6 +467,30 @@ De lopende tekst die volgt op het laatste lijstitem begint met "<em>Eén niet ee
 ---
 
 **Pagina 284/285** : Nginx WebDAV configuratie.
+
+![Nee](afbeeldingen/nee.png)
+<pre><strong>http {</strong>
+  server {
+    [&hellip;]
+  }
+  server {
+    [&hellip;]
+  }
+<strong>}</strong></pre>
+
+![Ja](afbeeldingen/ja.png)
+<pre>server {
+  [&hellip;]
+}
+server {
+  [&hellip;]
+}</pre>
+
+> Aangezien de configuraties voor de virtual servers worden ingevoegd in de *http* context (zie pagina 164, hoofdstuk *Webserver - deel&nbsp;1*, paragraaf *Nginx*, *Configuratie*), hoort de *http* context niet in deze configuratie; deze configuratie bevat alleen 2 *server* contexts.
+
+---
+
+**Pagina 290** : Nginx Radicale configuratie.
 
 ![Nee](afbeeldingen/nee.png)
 <pre><strong>http {</strong>
