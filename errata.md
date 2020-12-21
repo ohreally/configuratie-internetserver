@@ -65,7 +65,7 @@ antispoof for $interface
 <strong><del># Blokkeer expliciet geblokkeerde IP-adressen.
 block drop quick from &lt;f2b&gt; to any</del></strong></pre>
 
-> De meest recente versies van Fail2ban maken gebruik van een *anchor* om automatisch alle *tables* en *rules* te creëren.
+> De meest recente versies van Fail2ban maken gebruik van een *anchor* om automatisch de benodigde *tables* en *rules* te creëren. Deze *anchor* wordt ingevoegd tussen de *antispoof* regel en de *block in all* regel; de regels die verwijzen naar de table *f2b* dienen verwijderd te worden.
 
 ---
 
