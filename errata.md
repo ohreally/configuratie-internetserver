@@ -48,7 +48,7 @@ table f2b persist { }
 [&hellip;]
 
 # Blokkeer expliciet geblokkeerde IP-adressen.
-block drop quick from <f2b> to any</pre>
+block drop quick from &lt;f2b&gt; to any</pre>
 
 ![Ja](afbeeldingen/ja.png)
 <pre><strong><del># Tabel voor automatisch geblokkeerde IP-adressen.
@@ -63,7 +63,7 @@ antispoof for $interface
 [&hellip;]
 
 <strong><del># Blokkeer expliciet geblokkeerde IP-adressen.
-block drop quick from <f2b> to any</del></strong></pre>
+block drop quick from &lt;f2b&gt; to any</del></strong></pre>
 
 > De meest recente versies van Fail2ban maken gebruik van een *anchor* om automatisch alle *tables* en *rules* te creëren.
 
