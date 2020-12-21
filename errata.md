@@ -39,6 +39,36 @@ Het laatste lijstitem eindigt voor de zin die begint met "<em>Hieronder volgt ee
 
 ---
 
+**Pagina 68/69** : De *pf* configuratie.
+
+![Nee](afbeeldingen/nee.png)
+<pre># Tabel voor automatisch geblokkeerde IP-adressen.
+table f2b persist { }
+
+[&hellip;]
+
+# Blokkeer expliciet geblokkeerde IP-adressen.
+block drop quick from <f2b> to any</pre>
+
+![Ja](afbeeldingen/ja.png)
+<pre><strong><del># Tabel voor automatisch geblokkeerde IP-adressen.
+table f2b persist { }</del></strong>
+
+[&hellip;]
+antispoof for $interface
+
+<strong>anchor "f2b/*"</strong>
+
+# Standaard beleid.
+[&hellip;]
+
+<strong><del># Blokkeer expliciet geblokkeerde IP-adressen.
+block drop quick from <f2b> to any</del></strong></pre>
+
+> De meest recente versies van Fail2ban maken gebruik van een *anchor* om automatisch alle *tables* en *rules* te creëren.
+
+---
+
 **Pagina 71**
 
 Het is niet duidelijk waar de lijst eindigt en waar de lopende tekst weer begint.
