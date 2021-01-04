@@ -496,6 +496,24 @@ De lopende tekst die volgt op het laatste lijstitem begint met "<em>Eén niet ee
 
 ---
 
+**Pagina 277/278** : Nginx *alias* configuratie.
+
+![Nee](afbeeldingen/nee.png)
+<pre>server {
+  listen *:443;
+  server_name www.example.com;</pre>
+
+![Ja](afbeeldingen/ja.png)
+<pre>server {
+  listen *:443<strong> ssl</strong>;
+  server_name www.example.com;</pre>
+
+> De parameter *ssl* moet opgegeven worden voor poort 443, om TLS-versleuteling te activeren.
+
+> 2x
+
+---
+
 **Pagina 284/285** : Nginx WebDAV configuratie.
 
 ![Nee](afbeeldingen/nee.png)
