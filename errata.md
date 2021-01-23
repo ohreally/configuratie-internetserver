@@ -1,5 +1,11 @@
 # Errata voor *Configuratie van een internetserver*
 
+Legenda:
+
+![Nee](afbeeldingen/nee.png): oorspronkelijke tekst
+
+![Ja](afbeeldingen/ja.png): gecorrigeerde tekst
+
 ---
 
 **Algemeen**
@@ -42,13 +48,13 @@ Het laatste lijstitem eindigt voor de zin die begint met "<em>Hieronder volgt ee
 **Pagina 68/69** : De *pf* configuratie.
 
 ![Nee](afbeeldingen/nee.png)
-<pre># Tabel voor automatisch geblokkeerde IP-adressen.
-table f2b persist { }
+<pre><strong># Tabel voor automatisch geblokkeerde IP-adressen.
+table f2b persist { }</strong>
 
 [&hellip;]
 
-# Blokkeer expliciet geblokkeerde IP-adressen.
-block drop quick from &lt;f2b&gt; to any</pre>
+<strong># Blokkeer expliciet geblokkeerde IP-adressen.
+block drop quick from &lt;f2b&gt; to any</strong></pre>
 
 ![Ja](afbeeldingen/ja.png)
 <pre><strong><del># Tabel voor automatisch geblokkeerde IP-adressen.
