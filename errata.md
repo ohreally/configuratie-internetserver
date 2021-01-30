@@ -2,9 +2,9 @@
 
 Legenda:
 
-![Nee](afbeeldingen/nee.png): oorspronkelijke tekst
+![Nee](afbeeldingen/nee.png) : oorspronkelijke tekst
 
-![Ja](afbeeldingen/ja.png): gecorrigeerde tekst
+![Ja](afbeeldingen/ja.png) : gecorrigeerde tekst
 
 ---
 
@@ -12,6 +12,16 @@ Legenda:
 
 Gelieve voor vragen en opmerkingen over de vormgeving en de oefeningen direct contact op te nemen met <a href="mailto:service@boomberoepsonderwijs.nl">Boom Beroepsonderwijs</a>.
 Deze zijn verzorgd door de uitgever, en ik heb hier weinig tot geen invloed op.
+
+---
+
+**Achterflap**
+
+![Nee](afbeeldingen/nee.png)\
+Omdat het boek voornamelijk gaat over de gebruikte applicaties en niet zozeer over het onderliggende besturingssysteem, <strong>zal waar nodig</strong> voorbeelden worden gegeven voor FreeBSD, <strong>Ubuntu</strong> en CentOS
+
+![Ja](afbeeldingen/ja.png)\
+Omdat het boek voornamelijk gaat over de gebruikte applicaties en niet zozeer over het onderliggende besturingssysteem, <strong>zullen <del>waar nodig</del></strong> voorbeelden worden gegeven voor FreeBSD, <strong>Debian</strong> en CentOS
 
 ---
 
