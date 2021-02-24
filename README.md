@@ -1,8 +1,20 @@
-<img src="https://raw.githubusercontent.com/ohreally/configuratie-internetserver/main/afbeeldingen/isbn-9789037257519-2.png" alt="Configuratie van een internetserver" width="200">
-
 # Configuratie van een internetserver
 
-**Dit boek begeleidt de lezer of lezeres bij de installatie en configuratie van een internetserver.**
+<img src="afbeeldingen/isbn-9789037257519-2.png" alt="Configuratie van een internetserver" width="200">
+
+Deze repository hoort bij *Configuratie van een internetserver* door Robert LA LAU (Boom Beroepsonderwijs, 2020).
+
+## Releases
+
+Release v1.0 bevat de voorbeeldbestanden bij de eerste druk van de eerste uitgave van het boek.
+
+## Errata
+
+Zie het bestand [errata.md](errata.md) voor correcties en aanvullingen die zijn ontdekt na de publicatie van het boek.
+
+## Over het boek
+
+Dit boek begeleidt de lezer of lezeres bij de installatie en configuratie van een internetserver.
 
 Er wordt uitgegaan van een zogenaamde vanilla server: een server waarop een besturingssysteem is geïnstalleerd, maar verder nog niets is toegevoegd of geconfigureerd. Het boek begint met een hoofdstuk met Unix basiskennis, om de systeembeheerder vervolgens zo snel mogelijk mee te nemen 'het diepe' in. Iedere stap wordt duidelijk uitgelegd en geïllustreerd met voorbeelden. Ook wordt uitgelegd hoe eventuele problemen geanalyseerd kunnen worden.
 
@@ -14,4 +26,7 @@ Ik heb mijn best gedaan dit boek, zowel qua onderwerpen als qua taalgebruik, int
 
 Alle onderwerpen in dit boek worden beschreven en geïllustreerd voor FreeBSD, Debian en CentOS, zodat de systeembeheerder volledig vrij is in de keuze van het besturingssysteem.
 
-Meer informatie op [librobert.net](https://www.librobert.net/boek/internet/index.nl) of bij [Boom Beroepsonderwijs](https://webshop.boomberoepsonderwijs.nl/101-6714_configuratie-van-een-internetserver).
+## Meer informatie
+
+- [librobert.net](https://www.librobert.net/boek/internet/index.nl)
+- [Boom Beroepsonderwijs](https://webshop.boomberoepsonderwijs.nl/101-6714_configuratie-van-een-internetserver)
