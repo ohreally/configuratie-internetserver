@@ -2,7 +2,7 @@
 
 <img src="afbeeldingen/isbn-9789037257519-2.png" alt="Configuratie van een internetserver" width="200">
 
-Deze repository hoort bij *Configuratie van een internetserver* door Robert LA LAU (Boom Beroepsonderwijs, 2020).
+Deze repository hoort bij *[Configuratie van een internetserver](https://webshop.boomberoepsonderwijs.nl/101-6714_configuratie-van-een-internetserver)* door Robert LA LAU (Boom Beroepsonderwijs, 2020).
 
 ## Releases
 
