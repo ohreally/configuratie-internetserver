@@ -461,10 +461,10 @@ Het certificaat zal gebruikt worden voor de versleuteing van het verkeer tussen 
 **Pagina 243** : De configuratie van de authenticatie-socket.
 
 ![Nee](afbeeldingen/nee.png)
-<pre># nano conf.d/<strong>main.cf</strong></pre>
+<pre># nano conf.d/10-mai<strong>n.cf</strong></pre>
 
 ![Ja](afbeeldingen/ja.png)
-<pre># nano conf.d/<strong>mail.conf</strong></pre>
+<pre># nano conf.d/10-mai<strong>l.conf</strong></pre>
 
 ---
 
