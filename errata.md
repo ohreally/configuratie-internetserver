@@ -10,7 +10,7 @@ Legenda:
 
 **Algemeen**
 
-Gelieve voor vragen en opmerkingen over de vormgeving en de oefeningen direct contact op te nemen met <a href="mailto:service@boomberoepsonderwijs.nl">Boom Beroepsonderwijs</a>.
+Gelieve voor vragen en opmerkingen over de (tekstuele) vormgeving en de oefeningen direct contact op te nemen met <a href="mailto:service@boomberoepsonderwijs.nl">Boom Beroepsonderwijs</a>.
 Deze zijn verzorgd door de uitgever, en ik heb hier weinig tot geen invloed op.
 
 ---
