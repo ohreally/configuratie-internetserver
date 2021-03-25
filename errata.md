@@ -492,6 +492,18 @@ In het bestand <code>master.**cf**</code> [&hellip;]
 
 ---
 
+**Pagina 259** : Aanmaken groep *opendkim* op FreeBSD.
+
+![Nee](afbeeldingen/nee.png)
+<pre>freebsd# pw groupadd <strong>-g 127 opendkim</strong></pre>
+
+![Ja](afbeeldingen/ja.png)
+<pre>freebsd# pw groupadd <strong>opendkim -g 127</strong></pre>
+
+> Na het subcommando (*groupadd*) moet eerst de naam van de groep gegeven worden, en dan pas de overige parameters.
+
+---
+
 **Pagina 260** : Configuratiebestanden voor OpenDKIM.
 
 ![Nee](afbeeldingen/nee.png)\
