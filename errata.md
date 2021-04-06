@@ -526,6 +526,18 @@ Bogofilter is een lerende, zogenaamde *Bay**e**sian* spamfilter.
 
 ---
 
+**Pagina 267** : *bogofilter-train.sh*.
+
+![Nee](afbeeldingen/nee.png)
+<pre>cat | bogofilter ${FLAG} &</pre>
+
+![Ja](afbeeldingen/ja.png)
+<pre>cat | bogofilter <strong>-d "${HOME}/bogofilter"</strong> ${FLAG} &</pre>
+
+> Het pad naar de te gebruiken directory moet overeenkomen met het pad in *bogo-dirs.sh* en *bogofilter-mail.sh*.
+
+---
+
 **Pagina 273**
 
 Het is niet duidelijk waar de lijst op deze pagina ophoudt.
