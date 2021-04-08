@@ -12,6 +12,10 @@ Release v1.0 bevat de voorbeeldbestanden bij de eerste druk van de eerste uitgav
 
 Zie het bestand [errata.md](errata.md) voor correcties en aanvullingen die zijn ontdekt na de publicatie van het boek.
 
+## Addendum
+
+Een online addendum, met een grote hoeveelheid links naar aanvullende informatie en documentatie, is te vinden op [librobert.net/boek/internet/addendum](https://www.librobert.net/boek/internet/addendum.nl).
+
 ## Over het boek
 
 Dit boek begeleidt de lezer of lezeres bij de installatie en configuratie van een internetserver.
