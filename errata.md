@@ -631,7 +631,7 @@ server {
 <pre>proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</pre>
 
 ![Ja](afbeeldingen/ja.png)
-<pre><strong>proxy_set_header X-Script-Name /radicale;</strong>
+<pre><strong>proxy_set_header X-Script-Name /;</strong>
 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</pre>
 
 > De reverse proxy werkt niet zonder de *X-Script-Name* header.
