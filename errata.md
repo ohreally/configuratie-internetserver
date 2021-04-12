@@ -588,6 +588,19 @@ server {
 
 ---
 
+**Pagina 289** : Apache Radicale configuratie.
+
+![Nee](afbeeldingen/nee.png)
+<pre>RequestHeader set X-Remote-User expr=%{REMOTE_USER}</pre>
+
+![Ja](afbeeldingen/ja.png)
+<pre><strong>RequestHeader set X-Script-Name /</strong>
+RequestHeader set X-Remote-User expr=%{REMOTE_USER}</pre>
+
+> De reverse proxy werkt niet zonder de *X-Script-Name* header.
+
+---
+
 **Pagina 290** : Nginx Radicale configuratie.
 
 ![Nee](afbeeldingen/nee.png)
@@ -609,6 +622,19 @@ server {
 }</pre>
 
 > Aangezien de configuraties voor de virtual servers worden ingevoegd in de *http* context (zie pagina 164, hoofdstuk *Webserver - deel&nbsp;1*, paragraaf *Nginx*, *Configuratie*), hoort de *http* context niet in deze configuratie; deze configuratie bevat alleen 2 *server* contexts.
+
+---
+
+**Pagina 290** : Nginx Radicale configuratie.
+
+![Nee](afbeeldingen/nee.png)
+<pre>proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</pre>
+
+![Ja](afbeeldingen/ja.png)
+<pre><strong>proxy_set_header X-Script-Name /radicale;</strong>
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</pre>
+
+> De reverse proxy werkt niet zonder de *X-Script-Name* header.
 
 ---
 
