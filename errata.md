@@ -8,13 +8,6 @@ Legenda:
 
 ---
 
-**Algemeen**
-
-Gelieve voor vragen en opmerkingen over de (tekstuele) vormgeving en de oefeningen direct contact op te nemen met <a href="mailto:service@boomberoepsonderwijs.nl">Boom Beroepsonderwijs</a>.
-Deze zijn verzorgd door de uitgever, en ik heb hier weinig tot geen invloed op.
-
----
-
 **Achterflap**
 
 ![Nee](afbeeldingen/nee.png)\
@@ -101,7 +94,7 @@ Het laatste lijstitem eindigt voor de zin die begint met "<em>Hieronder volgt ee
 ![Ja](afbeeldingen/ja.png)\
 [&hellip;] worden hernoemd bij het kopiëren: *dot.profile* wordt ***.profile***, [&hellip;]
 
-> Een fout in de vormgeving maakt dat de tekst hier suggereert dat het bestand *.profile* een streepje in de naam zou kunnen hebben; dat is niet het geval.
+> Een foutje in de vormgeving maakt dat de tekst hier suggereert dat het bestand *.profile* een streepje in de naam zou kunnen hebben; dat is niet het geval.
 
 ---
 
@@ -296,7 +289,7 @@ error_log /var/log/www-groen.error<strong>;</strong></pre>
 # mkdir ./{alias,bin,cgi-bin,conf,htdocs,tmp}
 # setfacl -m user:www-db:rwx ./tmp
 <strong># setfacl -m default:user:www-db:rwx ./tmp</strong>
-# echo "<p>db.example.com</p>" > ./htdocs/index.html
+# echo "&lt;p&gt;db.example.com&lt;/p&gt;" > ./htdocs/index.html
 </pre>
 
 ![Ja](afbeeldingen/ja.png)
@@ -512,7 +505,7 @@ Om de sleutels te koppelen aan domeinen worden de bestanden *KeyTable* en ***Sig
 ![Ja](afbeeldingen/ja.png)\
 Om de sleutels te koppelen aan domeinen worden de bestanden *KeyTable* en ***SigningTable*** gebruikt.
 
-> Een fout in de vormgeving maakt dat de tekst hier suggereert dat het bestand *SigningTable* een streepje in de naam zou kunnen hebben; dat is niet het geval.
+> Een foutje in de vormgeving maakt dat de tekst hier suggereert dat het bestand *SigningTable* een streepje in de naam zou kunnen hebben; dat is niet het geval.
 
 ---
 
