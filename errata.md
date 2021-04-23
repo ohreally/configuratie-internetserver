@@ -8,7 +8,20 @@ Legenda:
 
 ---
 
-**Achterflap**
+* [Achterflap](#Achterflap)
+* [Hoofdstuk 2](#Hoofdstuk_2)
+* [Hoofdstuk 4](#Hoofdstuk_4)
+* [Hoofdstuk 5](#Hoofdstuk_5)
+* [Hoofdstuk 7](#Hoofdstuk_7)
+* [Hoofdstuk 9](#Hoofdstuk_9)
+* [Hoofdstuk 11](#Hoofdstuk_11)
+* [Hoofdstuk 12](#Hoofdstuk_12)
+* [Hoofdstuk 13](#Hoofdstuk_13)
+* [Hoofdstuk 15](#Hoofdstuk_15)
+
+---
+
+## <a id="Achterflap"></a>Achterflap
 
 ![Nee](afbeeldingen/nee.png)\
 Omdat het boek voornamelijk gaat over de gebruikte applicaties en niet zozeer over het onderliggende besturingssysteem, <strong>zal waar nodig</strong> voorbeelden worden gegeven voor FreeBSD, <strong>Ubuntu</strong> en CentOS
@@ -18,6 +31,8 @@ Omdat het boek voornamelijk gaat over de gebruikte applicaties en niet zozeer ov
 
 ---
 
+## <a id="Hoofdstuk_2"></a>Hoofdstuk 2
+
 **Pagina 18**
 
 Het laatste item van de getoonde lijst bestaat uit slechts 1 alinea.
@@ -25,6 +40,8 @@ Het laatste item van de getoonde lijst bestaat uit slechts 1 alinea.
 De zin die begint met "<em>Om 'botsingen' te voorkomen</em>" en de zinnen die daarop volgen, maken geen deel uit van de lijst.
 
 ---
+
+## <a id="Hoofdstuk_4"></a>Hoofdstuk 4
 
 **Pagina 62** : Herstarten van de service *netif*.
 
@@ -86,6 +103,8 @@ Het laatste lijstitem eindigt voor de zin die begint met "<em>Hieronder volgt ee
 
 ---
 
+## <a id="Hoofdstuk_5"></a>Hoofdstuk 5
+
 **Pagina 83** : De skeleton directory op FreeBSD.
 
 ![Nee](afbeeldingen/nee.png)\
@@ -129,6 +148,8 @@ freebsd# setfacl -d -m group:helpdesk:rwx /srv/www/www.example.com/docs
 
 ---
 
+## <a id="Hoofdstuk_7"></a>Hoofdstuk 7
+
 **Pagina 141/142** : *Inloggen met een sleutel* onder *Unix*.
 
 > Bij het bewerken van de tekst is de laatste alinea van deze paragraaf verloren gegaan. Deze alinea luidt als volgt:
@@ -136,6 +157,8 @@ freebsd# setfacl -d -m group:helpdesk:rwx /srv/www/www.example.com/docs
 De toepassing <code>ssh-agent</code>, die samen met de SSH-client is geïnstalleerd, kan gebruikt worden om de sleutel(s) in het geheugen te houden, zodat de gebruiker het wachtwoord slechts een enkele keer hoeft in te geven. Meer informatie over deze toepassing in <code>ssh-agent(1)</code>.
 
 ---
+
+## <a id="Hoofdstuk_9"></a>Hoofdstuk 9
 
 **Pagina 153** : Apache modules zoeken op FreeBSD.
 
@@ -277,6 +300,8 @@ error_log /var/log/www-groen.error<strong>;</strong></pre>
 > &rarr; 3x
 
 ---
+
+## <a id="Hoofdstuk_11"></a>Hoofdstuk 11
 
 **Pagina 194** : ACL voor de directory's.
 
@@ -451,6 +476,8 @@ Het certificaat zal gebruikt worden voor de versleuteing van het verkeer tussen 
 
 ---
 
+## <a id="Hoofdstuk_12"></a>Hoofdstuk 12
+
 **Pagina 243** : De configuratie van de authenticatie-socket.
 
 ![Nee](afbeeldingen/nee.png)
@@ -530,6 +557,8 @@ Bogofilter is een lerende, zogenaamde *Bay**e**sian* spamfilter.
 > Het pad naar de te gebruiken directory moet overeenkomen met het pad in *bogo-dirs.sh* en *bogofilter-mail.sh*.
 
 ---
+
+## <a id="Hoofdstuk_13"></a>Hoofdstuk 13
 
 **Pagina 273**
 
@@ -630,6 +659,8 @@ proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</pre>
 > De reverse proxy werkt niet zonder de *X-Script-Name* header.
 
 ---
+
+## <a id="Hoofdstuk_15"></a>Hoofdstuk 15
 
 **Pagina 305/306**
 
