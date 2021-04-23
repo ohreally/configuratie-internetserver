@@ -148,6 +148,32 @@ freebsd# setfacl -d -m group:helpdesk:rwx /srv/www/www.example.com/docs
 
 ---
 
+**Pagina 105** : ACL
+
+Niet vermeld, maar wel belangrijk.
+
+Behalve om aanvullende rechten toe te kennen, kunnen ACL ook gebruikt worden om rechten aanvullend te beperken. In het volgende voorbeeld heeft gebruiker *diane* als enige gebruiker geen toegang tot het bestand *nietvoordiane.txt*:
+
+<pre>
+$ ls -l ./nietvoordiane.txt
+-rw-r--r-- 1 dimitri wheel 893 4 apr. 15:43 ./nietvoordiane.txt
+$ getfacl ./nietvoordiane.txt
+  file: ./nietvoordiane.txt
+  owner: dimitri
+  group: wheel
+  user::rw-
+  group:r--
+  user:diane:---
+  mask::r--
+  other::r--
+</pre>
+
+Deze beperking kan opgeheven worden met het volgende commando:
+
+<pre>$ setfacl -x u:diane:--- ./nietvoordiane.txt</pre>
+
+---
+
 ## <a id="Hoofdstuk_7"></a>Hoofdstuk 7
 
 **Pagina 141/142** : *Inloggen met een sleutel* onder *Unix*.
