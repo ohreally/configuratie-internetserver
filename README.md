@@ -6,7 +6,7 @@ Deze repository hoort bij *[Configuratie van een internetserver](https://webshop
 
 ## Releases
 
-Release v1.0 bevat de voorbeeldbestanden bij de eerste druk van de eerste uitgave van het boek.
+[Release v1.0](https://github.com/ohreally/configuratie-internetserver/releases/tag/v1.0) bevat de voorbeeldbestanden bij de eerste druk van de eerste uitgave van het boek.
 
 ## Errata
 
